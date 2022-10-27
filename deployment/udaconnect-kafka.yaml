@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: udaconnect-kafka
+  name: udaconnect-kafka
+spec:
+  ports:
+    - name: '9092'
+      port: 9092
+      targetPort: 9092
+  selector:
+    service: udaconnect-kafka
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    service: udaconnect-kafka
+  name: udaconnect-kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: udaconnect-kafka
+  template:
+    metadata:
+      labels:
+        service: udaconnect-kafka
+    spec:
+      containers:
+        - image: m7moxd/kafka
+          name: kafkatest-container
+          imagePullPolicy: Always
+          env:
+            - name: KAFKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: db-kafka-env
+                  key: KAFKA_URL
+      restartPolicy: Always

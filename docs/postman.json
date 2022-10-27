@@ -1,0 +1,499 @@
+Request URL
+http://localhost:30001/api/persons
+
+Response body
+[
+    {
+      "first_name": "Taco",
+      "last_name": "Fargo",
+      "id": 5,
+      "company_name": "Alpha Omega Upholstery"
+    },
+    {
+      "first_name": "Frank",
+      "last_name": "Shader",
+      "id": 6,
+      "company_name": "USDA"
+    },
+    {
+      "first_name": "Pam",
+      "last_name": "Trexler",
+      "id": 1,
+      "company_name": "Hampton, Hampton and McQuill"
+    },
+    {
+      "first_name": "Paul",
+      "last_name": "Badman",
+      "id": 8,
+      "company_name": "Paul Badman & Associates"
+    },
+    {
+      "first_name": "Otto",
+      "last_name": "Spring",
+      "id": 9,
+      "company_name": "The Chicken Sisters Restaurant"
+    }
+]
+
+Response headers
+access-control-allow-origin: * 
+content-length: 489 
+content-type: application/json 
+date: Thu,27 Oct 2022 19:18:25 GMT 
+server: Werkzeug/0.16.1 Python/3.7.9
+
+**************************************************************************************************
+
+Request URL
+http://localhost:30001/api/persons/1
+
+Response body
+{
+    "first_name": "Pam",
+    "last_name": "Trexler",
+    "id": 1,
+    "company_name": "Hampton, Hampton and McQuill"
+}
+
+Response headers
+access-control-allow-origin: * 
+content-length: 103 
+content-type: application/json 
+date: Thu,27 Oct 2022 19:21:16 GMT 
+server: Werkzeug/0.16.1 Python/3.7.9
+
+**************************************************************************************************
+
+Request URL
+http://localhost:30001/api/persons/9/connection?start_date=2020-01-01&end_date=2020-12-30&distance=5
+
+Response body
+[
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721845",
+        "id": 46,
+        "person_id": 6,
+        "creation_time": "2020-04-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721846",
+        "id": 47,
+        "person_id": 6,
+        "creation_time": "2020-05-01T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721846",
+        "id": 51,
+        "person_id": 8,
+        "creation_time": "2020-07-01T10:38:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721845",
+        "id": 48,
+        "person_id": 6,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721845",
+        "id": 49,
+        "person_id": 8,
+        "creation_time": "2020-07-07T10:38:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.058564",
+        "longitude": "-106.5721846",
+        "id": 50,
+        "person_id": 8,
+        "creation_time": "2020-07-07T10:38:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719521",
+        "id": 62,
+        "person_id": 8,
+        "creation_time": "2020-01-05T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719521",
+        "id": 63,
+        "person_id": 5,
+        "creation_time": "2020-01-05T10:37:06"
+      },
+      "person": {
+        "first_name": "Taco",
+        "last_name": "Fargo",
+        "id": 5,
+        "company_name": "Alpha Omega Upholstery"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719521",
+        "id": 64,
+        "person_id": 6,
+        "creation_time": "2020-01-05T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719561",
+        "id": 61,
+        "person_id": 8,
+        "creation_time": "2020-07-05T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 43,
+        "person_id": 6,
+        "creation_time": "2020-07-06T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 60,
+        "person_id": 8,
+        "creation_time": "2020-07-06T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 42,
+        "person_id": 6,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 44,
+        "person_id": 6,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 58,
+        "person_id": 8,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "35.0585136",
+        "longitude": "-106.5719566",
+        "id": 59,
+        "person_id": 8,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 34,
+        "person_id": 6,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 36,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 37,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 38,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 39,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 40,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 41,
+        "person_id": 1,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Pam",
+        "last_name": "Trexler",
+        "id": 1,
+        "company_name": "Hampton, Hampton and McQuill"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 57,
+        "person_id": 5,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Taco",
+        "last_name": "Fargo",
+        "id": 5,
+        "company_name": "Alpha Omega Upholstery"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 66,
+        "person_id": 5,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Taco",
+        "last_name": "Fargo",
+        "id": 5,
+        "company_name": "Alpha Omega Upholstery"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 67,
+        "person_id": 8,
+        "creation_time": "2020-07-07T10:37:06"
+      },
+      "person": {
+        "first_name": "Paul",
+        "last_name": "Badman",
+        "id": 8,
+        "company_name": "Paul Badman & Associates"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 30,
+        "person_id": 5,
+        "creation_time": "2020-08-15T10:37:06"
+      },
+      "person": {
+        "first_name": "Taco",
+        "last_name": "Fargo",
+        "id": 5,
+        "company_name": "Alpha Omega Upholstery"
+      }
+    },
+    {
+      "location": {
+        "latitude": "-122.290883",
+        "longitude": "37.55363",
+        "id": 68,
+        "person_id": 6,
+        "creation_time": "2020-08-15T10:37:06"
+      },
+      "person": {
+        "first_name": "Frank",
+        "last_name": "Shader",
+        "id": 6,
+        "company_name": "USDA"
+      }
+    }
+]
+
+Response headers
+access-control-allow-origin: * 
+content-length: 10444 
+content-type: application/json 
+date: Thu,27 Oct 2022 19:26:49 GMT 
+server: Werkzeug/0.16.1 Python/3.7.9
